@@ -1,3 +1,10 @@
+---
+import "../assets/general.css";
+import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,19 +13,40 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
-		<meta name="robots" content="noindex, nofollow">
+		<meta name="robots" content="noindex, nofollow" />
 		<title>Guldsmed Pade</title>
+		
+		<link rel="stylesheet" href="../assets/general.css" />
 	</head>
+
+	<!-- BODY LAYOUT STRUCTURE with CSS Grid style -->
 	<body>
-		<slot />
+		<!-- <slot /> -->
+
+		<header class="header">
+			<!-- <Nav/ > -->
+			<!-- <Header /> -->
+			<h1>Header</h1>
+		</header>
+
+		<main class="main">
+			<slot />
+		</main>
+
+		<footer class="footer">
+			<!-- <Footer /> -->
+			 <h3>Footer</h3>
+		</footer>
 	</body>
 </html>
 
 <style>
-	html,
+	
+
+	/* html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
-	}
+	} */
 </style>
